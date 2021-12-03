@@ -3,3 +3,12 @@ on: pull_request_review
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
+    steps:
+    - uses: abinoda/label-when-approved-action@v1
+      env:
+        APPROVALS: "1"
+        GITHUB_TOKEN: ${{ github.token }}
+        ADD_LABEL: >
+           YEAH, BUT YOUR SCIENTISTS WERE SO PREOCCUPIED WITH 
+           WHETHER OR NOT THEY COULD THAT THEY DIDN’T STOP TO 
+           THINK IF THEY SHOULD.
